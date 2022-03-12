@@ -17,8 +17,6 @@ function App() {
     }
   }, [dice])
 
-  console.log(newGame)
-
   function generateDice() {
     return {
       value: Math.floor(Math.random() * 6) + 1,
