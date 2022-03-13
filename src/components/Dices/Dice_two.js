@@ -1,8 +1,8 @@
-export default function Dicetwo() {
+export default function DiceNametwo() {
   return (
-    <div class="second-face">
-      <span class="pip"></span>
-      <span class="pip"></span>
+    <div className="second-face">
+      <span className="pip"></span>
+      <span className="pip"></span>
     </div>
   )
 }

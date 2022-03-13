@@ -1,15 +1,15 @@
 export default function Dicesix() {
   return (
-    <div class="sixth-face">
-      <div class="column">
-        <span class="pip"></span>
-        <span class="pip"></span>
-        <span class="pip"></span>
+    <div className="sixth-face">
+      <div className="column">
+        <span className="pip"></span>
+        <span className="pip"></span>
+        <span className="pip"></span>
       </div>
-      <div class="column">
-        <span class="pip"></span>
-        <span class="pip"></span>
-        <span class="pip"></span>
+      <div className="column">
+        <span className="pip"></span>
+        <span className="pip"></span>
+        <span className="pip"></span>
       </div>
     </div>
   )

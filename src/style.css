@@ -156,6 +156,9 @@ body {
   display: flex;
   justify-content: space-between;
 }
+.second-face .pip:nth-child(1) {
+  margin-right: 8px;
+}
 
 .second-face .pip:nth-of-type(2) {
   align-self: flex-end;

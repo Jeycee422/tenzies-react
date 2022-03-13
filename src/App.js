@@ -1,6 +1,6 @@
 import Dice from './components/Dice'
 import Header from './components/Header'
-import React from 'react'
+import React, { useEffect } from 'react'
 import { nanoid } from 'nanoid'
 import Confetti from 'react-confetti'
 
