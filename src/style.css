@@ -101,6 +101,12 @@ body {
 .rolls-counter {
   color: var(--purple);
   font-weight: 500;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+.bestRolls-counter {
+  color: var(--purple);
+  font-weight: 700;
   margin-bottom: 10px;
   font-size: 1.1rem;
 }

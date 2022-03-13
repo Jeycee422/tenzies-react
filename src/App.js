@@ -8,14 +8,21 @@ function App() {
   const [dice, setDice] = React.useState(allNewDice())
   const [newGame, setNewGame] = React.useState(false)
   const [rolls, setRolls] = React.useState(0)
+  const [highscore, setHighscore] = React.useState(
+    JSON.parse(localStorage.getItem('highscore') || 40)
+  )
 
   React.useEffect(() => {
     const allDieIsHeld = dice.every((die) => die.isHeld)
     const allDieIsSame = dice.every((die) => die.value === dice[0].value)
     if (allDieIsHeld && allDieIsSame) {
       setNewGame(true)
+      if (rolls <= highscore) {
+        setHighscore(rolls)
+        localStorage.setItem('highscore', JSON.stringify(rolls))
+      }
     }
-  }, [dice])
+  }, [dice, rolls, highscore])
 
   function generateDice() {
     return {
@@ -99,6 +106,9 @@ function App() {
       <Header />
       <div className="dice-container">{diceElement}</div>
       {newGame && <div className="rolls-counter">Rolls: {rolls}</div>}
+      {newGame && (
+        <div className="bestRolls-counter">Best rolls: {highscore}</div>
+      )}
       <button className="roll-btn" onClick={rollDice}>
         {newGame ? 'New Game' : 'Roll'}
       </button>
