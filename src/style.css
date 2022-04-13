@@ -161,6 +161,7 @@ body {
 .second-face {
   display: flex;
   justify-content: space-between;
+  transform: rotate(45deg);
 }
 .second-face .pip:nth-child(1) {
   margin-right: 8px;
@@ -174,6 +175,7 @@ body {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  transform: rotate(-45deg);
 }
 
 .third-face .pip:nth-of-type(2) {
@@ -182,4 +184,8 @@ body {
 
 .third-face .pip:nth-of-type(3) {
   align-self: flex-end;
+}
+.third-face .pip:nth-child(1),
+.third-face .pip:nth-child(2) {
+  margin-bottom: 5px;
 }
